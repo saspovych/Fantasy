@@ -8,42 +8,57 @@
 </head>
 <body>
 	
-	<header>
-		<div class="header-actions">
-			<button>Поиск</button>
-			<button>Аккаунт</button>
-		</div>
-	</header>
+	<div class="news-wrapper">
+		<header>
+			<div class="header-title">
+				Новостная лента
+			</div>
+			<div class="header-actions">
+				<a href="#">
+					<svg fill="#000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 30 30" width="30px" height="30px"><path d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"/></svg>
+				</a>
+				<a href="#">
+					<svg fill="#000000" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16" width="32px" height="32px"><path d="M 8 2 C 6.347656 2 5 3.347656 5 5 C 5 6.652344 6.347656 8 8 8 C 9.652344 8 11 6.652344 11 5 C 11 3.347656 9.652344 2 8 2 Z M 8 8 C 5.246094 8 3 10.246094 3 13 L 4 13 C 4 10.785156 5.785156 9 8 9 C 10.214844 9 12 10.785156 12 13 L 13 13 C 13 10.246094 10.753906 8 8 8 Z M 8 3 C 9.109375 3 10 3.890625 10 5 C 10 6.109375 9.109375 7 8 7 C 6.890625 7 6 6.109375 6 5 C 6 3.890625 6.890625 3 8 3 Z"/></svg>
+				</a>
+			</div>
+		</header>
 
-	<main>
 		<aside>
-			<div class="sidebar-logo">Fantasy</div>
-			<div class="sidebar-menu">
-				<ul>
-					<li><a href="#">Menu item - 1</a></li>
-					<li><a href="#">Menu item - 2</a></li>
-					<li><a href="#">Menu item - 3</a></li>
-					<li><a href="#">Menu item - 4</a></li>
-					<li><a href="#">Menu item - 5</a></li>
-				</ul>
+			<div class="sidebar-content">
+				<div class="sidebar-logo">Fantasy</div>
+				<div class="sidebar-menu">
+					<ul>
+						<li><a href="#">Menu item - 1</a></li>
+						<li><a href="#">Menu item - 2</a></li>
+						<li><a href="#">Menu item - 3</a></li>
+						<li><a href="#">Menu item - 4</a></li>
+						<li><a href="#">Menu item - 5</a></li>
+					</ul>
+				</div>
 			</div>
 		</aside>
-		<div class="news-section">
-			<div class="news-grid">
-				<div class="news large-news"></div>
-				<div class="news medium-news"></div>
-				<div class="news small-news"></div>
-				<div class="news small-news"></div>
-				<div class="news small-news"></div>
-				<div class="news small-news"></div>
-				<div class="news medium-news"></div>
-				<div class="news large-news"></div>
+
+		<main>
+			<div class="news-section">
+				<div class="news-grid">
+					<div class="news-grid-layout news-grid-first">
+						<div class="news large-news"></div>
+						<div class="news medium-news"></div>
+						<div class="news small-news"></div>
+						<div class="news small-news"></div>
+					</div>
+					<div class="news-grid-layout news-grid-second">
+						<div class="news small-news"></div>
+						<div class="news small-news"></div>
+						<div class="news medium-news"></div>
+						<div class="news large-news"></div>
+					</div>
+				</div>
 			</div>
-		</div>
-	</main>
+		</main>
 
-	<footer></footer>
-
+		<footer></footer>
+	</div>
 	<script src="scripts/index.js"></script>
 </body>
 </html>

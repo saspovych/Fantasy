@@ -9,36 +9,59 @@ a {
 	color: black;
 }
 
+.news-wrapper {
+	display: grid;
+	grid-template-areas: 
+		"sidebar header"
+		"sidebar main"
+		"sidebar footer";
+	grid-template-columns: 0.5fr 2fr;
+	grid-template-rows: 0.15fr 2.5fr 0.15fr;
+}
+
 header {
+	grid-area: header;
+	position: sticky;
+	top: 0;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	height: 50px;
+	justify-content: space-between;
 	width: 100%;
 
 	background-color: #0c0;
 }
 
-main {
+.header-title {
+	padding-left: 15px;
+
+	font-size: 28px;
+	font-weight: 500;
+}
+
+.header-actions {
 	display: flex;
-	background-color: blue;
-	height: calc(100vh - 50px);
+	justify-content: end;
+	align-items: center;
 }
 
 aside {
+	grid-area: sidebar;
 	padding-top: 35px;
-	height: 100%;
-	width: 25%;
 	text-align: center;
 	background-color: yellow;
+}
+
+.sidebar-content {
+	position: sticky;
+	top: 35px;
 }
 
 .sidebar-logo {
 	margin-bottom: 70px;
 
-	font-size: 36px;
+	font-size: 48px;
 	font-weight: 800;
-	line-height: 38px;
+	line-height: 50px;
 }
 
 .sidebar-menu {
@@ -50,35 +73,66 @@ aside {
 	padding: 5px 0;
 }
 
+main {
+	grid-area: main;
+	background-color: blue;
+}
+
 .news-section {
-	background-color: orange;
+	padding: 25px 0;
 	height: 100%;
-	width: 75%;
+	width: 100%;
+	background-color: orange;
 }
 
-.news-grid {
-		display: grid;
-		grid-gap: 20px;
+.news-grid-layout {
+	display: grid;
+	grid-template-columns: repeat(4, 250px);
+	grid-template-rows: repeat(2, 250px);
+	justify-content: center;
+	align-content: start;
+	gap: 10px;
 }
 
-.news {
-	background-color: gray;
+.news-grid-layout:not(:first-child) {
+	margin-top: 10px;
 }
 
-.large-news {
+.news-grid-first .large-news {
+	grid-column: 1 / 3;
+	grid-row: 1 / 4;
 	background-color: pink;
-	width: 350px;
-	height: 350px;
 }
 
-.medium-news {
+.news-grid-first .medium-news {
+	grid-column: 3 / 5;
 	background-color: white;
-	width: 250px;
-	height: 250px;
 }
 
-.small-news {
+.news-grid-first .small-news {
+	height: calc(100% + 10px);
 	background-color: black;
-	width: 100px;
-	height: 100px;
+}
+
+.news-grid-second .large-news {
+	grid-column: 3 / 5;
+	grid-row: 1 / 4;
+	background-color: pink;
+}
+
+.news-grid-second .medium-news {
+	grid-column: 1 / 3;
+	height: 100%;
+	margin-top: 10px;
+	background-color: white;
+}
+
+.news-grid-second .small-news {
+	height: calc(100% + 10px);
+	background-color: black;
+}
+
+footer {
+	grid-area: footer;
+	background-color: red;
 }
